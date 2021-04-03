@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="RestAssurdApiTesting">
+        <classes>
+            <class name="krishna.examples.ReqResTestExamples">
+                <methods>
+                    <include name="testGetAllUsersPaged"/>
+                    <include name="testGetAllUsersPagedDelayed"/>
+                    <include name="testGetOnlyUser"/>
+                    <include name="testPostRegisterUser"/>
+                    <include name="testPostRegisterUserUnsuccessful"/>
+                    <include name="testGetSingleUserNotFound"/>
+                    <include name="testGetApiUnknown"/>
+                    <include name="testGetApiSingleOnlyUnknown"/>
+                    <include name="testGetApiSingleOnlyUnknownNotFound"/>
+                    <include name="testPostCreate"/>
+                    <include name="testPutUpdate"/>
+                    <include name="testPatch"/>
+                    <include name="testDelete"/>
+                    <include name="testLoginSuccessful"/>
+                    <include name="testLoginUnsuccessful"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
