@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.lessThan;
 
 public class ReqResTestExamples {
 
-    @Test
+    @Test(priority = 1)
     public void testGetAllUsersPaged() {
         given()
                 .when()
@@ -23,7 +23,7 @@ public class ReqResTestExamples {
                 .body("data[0].avatar", equalTo("https://reqres.in/img/faces/7-image.jpg"));
     }
 
-    @Test
+    @Test(priority = 2)
     public void testGetAllUsersPagedDelayed() {
         given()
                 .when()
@@ -39,7 +39,7 @@ public class ReqResTestExamples {
                 .time(lessThan(4000L));
     }
 
-    @Test
+    @Test(priority = 3)
     public void testGetOnlyUser() {
         given()
                 .when()
@@ -83,7 +83,7 @@ public class ReqResTestExamples {
                 .body("error", equalTo("Missing password"));
     }
 
-    @Test
+    @Test(priority = 4)
     public void testGetSingleUserNotFound() {
         given()
                 .when()
@@ -92,7 +92,7 @@ public class ReqResTestExamples {
                 .statusCode(404);
 
     }
-    @Test
+    @Test(priority = 5)
     public void testGetApiUnknown() {
         given()
                 .when()
@@ -106,7 +106,7 @@ public class ReqResTestExamples {
                 .body("data[0].pantone_value", equalTo("15-4020"));
 
     }
-    @Test
+    @Test(priority = 6)
     public void testGetApiSingleOnlyUnknown() {
         given()
                 .when()
@@ -120,7 +120,7 @@ public class ReqResTestExamples {
                 .body("data.pantone_value", equalTo("17-2031"));
 
     }
-    @Test
+    @Test(priority = 7)
     public void testGetApiSingleOnlyUnknownNotFound() {
         given()
                 .when()
